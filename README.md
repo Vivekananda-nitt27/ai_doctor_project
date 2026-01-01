@@ -1,36 +1,39 @@
-🩺 AI Doctor – Vision & Voice Based Medical Assistant
 
-An end-to-end AI Doctor application that takes patient voice input and medical images, analyzes them using multimodal AI models, and responds with a natural doctor-like voice.
-The system is deployed and running on AWS EC2 with a Gradio web interface.
 
-🚀 Project Status
+**🩺 AI Doctor — Vision & Voice Powered Medical Assistant
+🚀 Project Status**
 
 ✅ Successfully deployed on AWS EC2
 
 ✅ Running in production
 
-✅ Accessible via browser (Gradio UI)
+✅ Browser-based interactive UI using Gradio
 
-🧠 What This Project Does
+**🧠 Project Overview**
 
-Records patient voice via microphone
+An end-to-end AI Doctor application that enables intelligent medical interaction using voice and images.
+The system listens to a patient’s voice, analyzes optional medical images using multimodal AI, and responds with a natural, doctor-like voice.
 
-Converts speech to text using Whisper
+**✨ Key Features**
 
-Analyzes uploaded medical images using vision-enabled LLM
+🎙️ Voice-based patient interaction
 
-Generates concise medical reasoning
+🖼️ Medical image understanding with vision-enabled LLMs
 
-Converts doctor response into realistic voice
+🧾 Real-time speech-to-text transcription
 
-Displays everything in a single interactive web app
+🧠 Concise AI-powered medical reasoning
 
-🛠️ Tech Stack
-Frontend / UI
+🔊 Natural doctor-like voice responses
+
+🖥️ Unified web interface
+
+🛠️ Technology Stack
+🖥️ Frontend / UI
 
 Gradio
 
-Speech Processing
+🎧 Speech Processing
 
 SpeechRecognition
 
@@ -38,7 +41,7 @@ PyAudio
 
 FFmpeg
 
-AI & ML
+🤖 AI & Machine Learning
 
 Whisper Large v3 (Speech-to-Text via Groq)
 
@@ -48,7 +51,7 @@ ElevenLabs (Text-to-Speech)
 
 gTTS (Fallback TTS)
 
-Backend
+⚙️ Backend
 
 Python
 
@@ -56,61 +59,63 @@ Groq API
 
 ElevenLabs API
 
-Deployment
+☁️ Deployment
 
 AWS EC2 (Linux)
 
 Virtual Environment (venv)
 
-Environment Variables (.env)
+Secure Environment Variables (.env)
 
-📂 Project Structure
+**📂 Project Structure**
 doctor_ai/
 │
-├── brain_of_the_doctor.py      # Image + LLM reasoning
-├── voice_of_the_patient.py    # Audio recording & transcription
-├── voice_of_the_doctor.py     # Text-to-Speech logic
-├── gradio_app.py              # Gradio UI entry point
+├── brain_of_the_doctor.py      # Image encoding & AI reasoning
+├── voice_of_the_patient.py     # Audio recording & transcription
+├── voice_of_the_doctor.py      # Text-to-Speech generation
+├── gradio_app.py               # Gradio web interface
 ├── requirements.txt
 ├── README.md
 └── .gitignore
 
-🧩 Component Breakdown
+🧩 System Components
 🎙️ Voice of the Patient
 
-Records patient speech
+Records patient speech via microphone
 
-Converts audio to MP3
+Converts audio into MP3 format
 
 Transcribes speech using Whisper Large v3
 
 🧠 Brain of the Doctor
 
-Encodes medical images
+Encodes uploaded medical images
 
-Sends image + patient text to LLM
+Combines patient speech + image input
 
-Generates human-like medical responses
+Generates concise, doctor-like medical responses
 
-Avoids AI disclaimers and markdown
+Avoids AI disclaimers and markdown formatting
 
 🔊 Voice of the Doctor
 
-Converts text response to speech
+Converts AI-generated medical responses into speech
 
-Uses ElevenLabs for realistic output
+Uses ElevenLabs for realistic voice output
 
-Supports autoplay in UI
+Supports audio playback within the UI
 
-🖥️ Gradio Interface
+🖥️ Gradio Web Interface
 
-Microphone input
+Microphone audio input
 
-Image upload
+Medical image upload
 
-Text output (STT + Doctor response)
+Speech-to-text output
 
-Audio playback (Doctor voice)
+Doctor’s response display
+
+Audio playback
 
 🔐 Environment Variables
 
@@ -120,35 +125,33 @@ GROQ_API_KEY=your_groq_api_key
 ELEVEN_API_KEY=your_elevenlabs_api_key
 
 
-⚠️ Do not upload .env to GitHub.
+⚠️ Never commit .env to GitHub
 
-▶️ How to Run Locally
+▶️ Run Locally
 python -m venv venv
-source venv/bin/activate   # Windows: venv\Scripts\activate
+source venv/bin/activate      # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 python gradio_app.py
 
 
-App runs at:
+📍 Application URL: http://127.0.0.1:7860
 
-http://127.0.0.1:7860
+☁️ Deployment on AWS EC2
 
-☁️ Deployment (AWS EC2)
+Hosted on Linux-based EC2 instance
 
-Ubuntu EC2 instance
+Python runtime with required dependencies
 
-Python + FFmpeg installed
+Environment variables securely configured
 
-Environment variables configured
-
-Gradio app running continuously
+Application running continuously
 
 ⚠️ Disclaimer
 
-This project is built only for educational and learning purposes.
-It does not replace professional medical advice.
+This project is developed strictly for educational and learning purposes.
+It does not replace professional medical advice, diagnosis, or treatment.
 
-⭐ Key Highlights
+⭐ Project Highlights
 
 Multimodal AI (Voice + Vision)
 
@@ -156,6 +159,11 @@ Real-time medical reasoning
 
 Natural doctor-like voice responses
 
-Modular & scalable architecture
+Modular and scalable architecture
 
 Production deployment on AWS EC2
+
+**📌 Intellectual Property Notice**
+
+This project is shared for educational purposes only.
+Commercial use, redistribution, or deployment without permission is not allowed.
